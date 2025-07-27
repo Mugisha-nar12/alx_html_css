@@ -64,7 +64,9 @@ body {
 /* ============================= Header ============================= */
 
 .header {
-  background-image: url("./Assets/Image/Object.png");
+    /* make image darker  and reduce opacity*/
+    
+  background-image:url("./Assets/Image/Object.png");
   background-size:cover;
   max-block-size: 920px;
   min-block-size: 840px;
@@ -72,7 +74,7 @@ body {
   padding-bottom: 20px;
   color: var(--white);
   text-align: center;
-  
+  filter: 50%;  
 }
 
 .header-container {
@@ -81,13 +83,19 @@ body {
   justify-content: space-between; /* Create space between logo and navigation */
   height: 70px;
   padding: 10px 30px; /* Add some padding around the header content */
+  
 }
-
+.header-container > div{
+    margin-left: 6%;
+}
 .logo img {
   margin-right: 20px;
 }
 
 /* Navigation Menu */
+.nav-menu{
+    margin-right: 6%;
+}
 .nav-menu a {
   text-decoration: none;
   color: var(--color-white);
