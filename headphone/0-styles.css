@@ -1,0 +1,175 @@
+:root {
+  --color-primary: #071629;
+  --color-secondary: #FF6565;
+  --color-white: #FFFFFF;
+  --font-family-base: 'Source Sans Pro', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  color: var(--color-primary);
+  background-color: var(--color-white);
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-primary);
+  position: relative;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  margin-left: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--color-secondary);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  background: none;
+  border: none;
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  z-index: 1001;
+}
+
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  background-color: var(--color-white);
+  height: 3px;
+  width: 25px;
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after {
+  content: '';
+  position: absolute;
+}
+
+.menu-toggle span::before {
+  top: -8px;
+}
+
+.menu-toggle span::after {
+  top: 8px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-links a {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.hero-section {
+  background-image: url(./images/headphones_hero_1.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: var(--color-white);
+  padding: 8rem 1rem 5rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 0;
+}
+
+.hero-content h2 {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.hero-content p {
+  max-width: 90%;
+  margin: 3rem auto 0;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn:hover,
+.btn:active {
+  opacity: 0.9;
+}
