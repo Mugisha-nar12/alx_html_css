@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones</title>
+    <link rel="stylesheet" href="2-styles.css">
+
+    <link rel="stylesheet" href="1-styles.css">
+    <!--style from previous-->
+     <link rel="stylesheet" href="0-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://holberton.school/css/holberton_school-icon.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   
+</head>
+<body>
+     <!-- Header and Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+<div class="header-nav">
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+
+    <div class="logo">
+      <a href="#">
+        <img id="image-logo" src="./images/logo_headphones.png" alt="Headphones Logo" />
+      </a>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+        <a href="#">what we do</a>
+        <a href="#">our results</a>
+        <a href="#">contact us</a>
+    </nav>
+</div>
+
+
+
+            <div class="hero-content">
+                <h1>Lorem ipsum dolor set amet lorem ipsum</h1>
+                <h2>Lorem ipsum dolor set amet lorem ipsum dolor set</h2>
+                <button class="btn">CALL TO ACTION</button>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </div>
+    </header>
+<main>
+    <!-- What we do... Section -->
+        <section class="what-we-do-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What we do...</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="holberton_school-icon-ic_sound"></span>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="holberton_school-icon-ic_video"></span>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="holberton_school-icon-ic_music"></span>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="holberton_school-icon-ic_hearing"></span>
+                        <h3>Lorem ipsum</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Our results Section -->
+
+        <section class="results-section" style="background-image: url(images/headphones_hero_2.jpg);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our results speak for themselves</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="pentagon">
+                            <h3>+2%</h3>
+                            <p>Lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="pentagon">
+                            <h3>+2%</h3>
+                            <p>Lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="pentagon">
+                            <h3>+2%</h3>
+                            <p>Lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                    <div class="result-item">
+                        <div class="pentagon">
+                            <h3>+2%</h3>
+                            <p>Lorem ipsum dolor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+     const toggleButton = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+        // Toggle button symbol between hamburger and close sign
+        if (navLinks.classList.contains('show')) {
+            toggleButton.innerHTML = '&times;'; // × close sign
+        } else {
+            toggleButton.innerHTML = '&#9776;'; // ☰ hamburger menu
+        }
+    });
+</script>
+</html>
